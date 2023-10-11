@@ -1,0 +1,197 @@
+.flex {
+  display: flex;
+}
+.flex-dir-col {
+  flex-direction: column;
+}
+.container {
+  margin: 20px auto;
+  width: 80%;
+}
+.text-field__input {
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1px;
+  margin: 0 15px 15px 0;
+  outline: none;
+  border: 1px solid #f18230;
+  border-radius: 25px;
+  height: 46px;
+  line-height: 0;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+.btn span {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 25px;
+  height: 42px;
+  line-height: 38px;
+  border: 1px solid #f18230;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #f18230;
+  text-align: center;
+  font-weight: 600;
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover span {
+  background-color: #fba768;
+}
+.btn:active span {
+  background-color: #c17237 !important;
+}
+.btn:disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.greetings {
+  text-align: center;
+  margin: 20px 0;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 250px;
+  height: 250px;
+}
+.programm__container {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav {
+  justify-content: space-around;
+}
+
+.nav li {
+  list-style: none;
+  width: 20%;
+}
+.nav li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  background-color: greenyellow;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+}
+.reg-form-container {
+  align-items: center;
+}
+.reg-form-container input {
+  width: 30%;
+}
+.programm-item {
+  margin: 0 10px;
+}
+.delete-programm-btn {
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+.update-programm-btn {
+  background-color: yellowgreen;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+.update-form {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.programms-title {
+  text-align: center;
+}
+
+.btn-send-to-update {
+  color: black;
+}
+.desc-programm-btn {
+  background: skyblue;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+.desc-content {
+  display: none;
+}
+.btn-reg {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 10px 0;
+  width: 30%;
+  background: linear-gradient(#ddf089, #8b69e9);
+  opacity: 0.5;
+}
+.btn-reg:hover {
+  transition: all 1s;
+  padding: 20px;
+  opacity: 1;
+}
+.favorites-programm-btn {
+  background: rgb(250, 0, 217);
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 10px 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+.favorites-programm-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
