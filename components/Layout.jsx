@@ -4,6 +4,7 @@ module.exports = function Layout({ title, children }) {
     <html lang="en">
       <head>
         <title>{title}</title>
+        <div></div>
         <link rel="stylesheet" href="/styles/style.css" />
         <script defer src="/scripts/auth.js" />
       </head>
