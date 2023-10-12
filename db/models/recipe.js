@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       cooking_time: {
         type: DataTypes.INTEGER,
       },
-      ingredients: {
+      description: {
         type: DataTypes.TEXT,
       },
     },
