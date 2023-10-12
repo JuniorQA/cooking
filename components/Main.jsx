@@ -1,9 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
-module.exports = function Main(user) {
-  console.log(user)
+const NavBar = require('./NavBar');
+module.exports = function Main() {
   return (
     <Layout>
+      <NavBar />
       {/* {programms.map((programm) => (
               <>
                 <Programm programm={programm} />
