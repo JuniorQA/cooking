@@ -9,22 +9,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      category: {
+      name: {
         type: Sequelize.TEXT,
       },
-      content: {
+      image: {
         type: Sequelize.TEXT,
+      },
+      cooking_time: {
+        type: Sequelize.INTEGER,
       },
       description: {
         type: Sequelize.TEXT,
-      },
-      user_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'id',
-        },
-        onDelete: 'cascade',
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +32,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Programms');
+    await queryInterface.dropTable('Recipes');
   },
 };
