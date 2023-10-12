@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest&family=Roboto:ital@1&display=swap');
+* {
+  font-family: 'Onest', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 .flex {
   display: flex;
 }
@@ -8,6 +14,29 @@
   margin: 20px auto;
   width: 80%;
 }
+
+.main-menu {
+  justify-content: space-between;
+}
+
+nav {
+  background-color: #66a182;
+}
+.main-menu li {
+  list-style: none;
+  display: block;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  background-color: #66a182;
+}
+
+.main-menu li a {
+  text-decoration: none;
+}
+
 .text-field__input {
   display: block;
   width: 100%;
@@ -85,11 +114,6 @@
 .greetings {
   text-align: center;
   margin: 20px 0;
-}
-* {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 img {
   width: 250px;
@@ -193,5 +217,3 @@ img {
   text-decoration: none;
   color: white;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
