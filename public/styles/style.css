@@ -34,6 +34,7 @@ nav {
 }
 
 .main-menu li a {
+  border-radius: 8px;
   line-height: 50px;
   height: 50px;
   text-align: center;
@@ -72,7 +73,7 @@ nav {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-.recipes-container img {
+img {
   width: 250px;
   height: 250px;
 }
@@ -85,8 +86,47 @@ nav {
   border-radius: 8px;
   padding: 10px;
   margin: 10px;
+  transition: 0.5s all;
+}
+
+.recipe-item-container:hover {
+  transition: 1s all;
+  transform: scale(1.2);
 }
 
 .recipe-item-container * {
   color: black;
+}
+
+.inner-recipe-container {
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: rgba(255, 166, 0, 0.4);
+}
+.inner-recipe-container * {
+  margin: 20px;
+  text-align: center;
+}
+.inner-recipe-container img {
+  width: 400px;
+  height: auto;
+}
+body {
+  position: relative;
+}
+
+body::after {
+  content: '';
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://incrussia.ru/wp-content/uploads/2018/10/iStock-694189032.jpg');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }

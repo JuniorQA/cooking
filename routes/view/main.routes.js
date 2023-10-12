@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
   res.send(html);
 });
 
-router.get('/recipeId', async (req, res) => {
+router.get('/:recipeId', async (req, res) => {
   try {
     const { recipeId } = req.params;
     const recipe = await Recipe.findOne({ where: { id: recipeId } });
