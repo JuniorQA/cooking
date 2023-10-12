@@ -1,9 +1,11 @@
 const React = require('react');
 
-module.exports = function NavBar({ user, recipe }) {
+module.exports = function RecipeItem({ user, recipe }) {
   return (
-    <div className="recipe-item-container flex flex-dir-col">
-      <h2>Название: {recipe.name}</h2>
-    </div>
+
+    <a href="#" className="recipe-item-container flex flex-dir-col">
+      <h2>{recipe.name}</h2>
+      <img src={recipe.image} alt={recipe.name} />
+    </a>
   );
 };
