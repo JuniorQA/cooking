@@ -1,6 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
-module.exports = function Main() {
+module.exports = function Main(user) {
+  console.log(user)
   return (
     <Layout>
       {/* {programms.map((programm) => (
