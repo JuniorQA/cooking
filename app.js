@@ -10,5 +10,25 @@ config(app);
 
 app.use('/', indexRouter);
 
+
+app.get('/cookie', (req, res) => {
+    res.cookie('test', 42, { httpOnly: true });
+    console.log(req.cookies);
+    res.end();
+  });
+  
+  app.get('/session', (req, res) => {
+    if (req.session.count) {
+      req.session.count += 1;
+    } else {
+      req.session.count = 1;
+    }
+    res.json(req.session);
+  });
+
+  app.get('/version', (req, res) => {
+    res.json({ version: process.version });
+  });
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Сервер работает на ${PORT} порту`));
