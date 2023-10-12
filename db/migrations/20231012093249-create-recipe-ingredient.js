@@ -2,26 +2,25 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Recipes', {
+    await queryInterface.createTable('RecipeIngredients', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      category: {
-        type: Sequelize.TEXT,
-      },
-      content: {
-        type: Sequelize.TEXT,
-      },
-      description: {
-        type: Sequelize.TEXT,
-      },
-      user_id: {
+      recipe_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Users',
+          model: 'Recipes',
+          key: 'id',
+        },
+        onDelete: 'cascade',
+      },
+      ingredient_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Ingredients',
           key: 'id',
         },
         onDelete: 'cascade',
@@ -37,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Programms');
+    await queryInterface.dropTable('RecipeIngredients');
   },
 };
