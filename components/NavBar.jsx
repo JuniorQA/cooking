@@ -1,5 +1,6 @@
 const React = require('react');
-module.exports = function NavBar() {
+
+module.exports = function NavBar({ user }) {
   return (
     <nav>
       <ul className="main-menu flex">
@@ -19,10 +20,10 @@ module.exports = function NavBar() {
         </li>
         <ul className="dropdown-menu">
           <li>
-            <a href="#">Регистрация</a>
+            <a href="/auth/sign-up">Регистрация</a>
           </li>
           <li>
-            <a href="#">Авторизация</a>
+            <a href="/auth/sign-in">Авторизация</a>
           </li>
         </ul>
       </ul>

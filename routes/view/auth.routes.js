@@ -4,11 +4,14 @@ const AuthorizationFormPage = require('../../components/AuthorizationFormPage');
 const router = require('express').Router();
 
 router.get('/sign-up', (req, res) => {
+  console.log('----->>');
   const html = res.renderComponent(RegistrationFormPage, { title: 'reg form' });
   res.send(html);
 });
 router.get('/sign-in', (req, res) => {
-  const html = res.renderComponent(AuthorizationFormPage, { title: 'log form' });
+  const html = res.renderComponent(AuthorizationFormPage, {
+    title: 'log form',
+  });
   res.send(html);
 });
 

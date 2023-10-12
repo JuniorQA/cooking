@@ -35,6 +35,7 @@ nav {
 
 .main-menu li a {
   text-decoration: none;
+  color: white;
 }
 
 .text-field__input {
