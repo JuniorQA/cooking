@@ -26,7 +26,6 @@
 //   }
 
 function sortArray(array, sortSelect, sortType) {
-  
   if (sortSelect === 'asc' && sortType === 'cooking-time') {
     array.sort((a, b) => a.cooking_time - b.cooking_time);
   } else if (sortSelect === 'desc' && sortType === 'cooking-time') {

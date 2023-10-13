@@ -8,7 +8,7 @@ function AuthorizationFormPage({ title }) {
         <form id="sign-in">
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
-              Email address
+              Почта
             </label>
             <input
               name="email"
@@ -20,7 +20,7 @@ function AuthorizationFormPage({ title }) {
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Password
+              Пароль
             </label>
             <input
               name="password"
@@ -30,7 +30,7 @@ function AuthorizationFormPage({ title }) {
             />
           </div>
           <button type="submit" className="btn btn-primary">
-            Submit
+            Войти
           </button>
         </form>
         <h1 style={{ color: 'red' }} className="error"></h1>
