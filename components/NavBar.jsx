@@ -12,7 +12,7 @@ module.exports = function NavBar({ user }) {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a href="#">Избранное</a>
+                  <a href="/favorites">Избранное</a>
                 </li>
                 <li>
                   <a href="#">Рецепты</a>
