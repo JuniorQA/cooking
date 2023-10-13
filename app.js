@@ -1,35 +1,34 @@
-require('@babel/register');
-require('dotenv').config();
-const express = require('express');
-const config = require('./config/serverConfig');
+require('@babel/register')
+require('dotenv').config()
+const express = require('express')
+const config = require('./config/serverConfig')
 
-const app = express();
+const app = express()
 
-const indexRouter = require('./routes/index.routes');
+const indexRouter = require('./routes/index.routes')
 
-config(app);
+config(app)
 
-app.use('/', indexRouter);
-
+app.use('/', indexRouter)
 
 app.get('/cookie', (req, res) => {
-    res.cookie('test', 42, { httpOnly: true });
-    console.log(req.cookies);
-    res.end();
-  });
-  
-  app.get('/session', (req, res) => {
-    if (req.session.count) {
-      req.session.count += 1;
-    } else {
-      req.session.count = 1;
-    }
-    res.json(req.session);
-  });
+	res.cookie('test', 42, { httpOnly: true })
+	console.log(req.cookies)
+	res.end()
+})
 
-  app.get('/version', (req, res) => {
-    res.json({ version: process.version });
-  });
+app.get('/session', (req, res) => {
+	if (req.session.count) {
+		req.session.count += 1
+	} else {
+		req.session.count = 1
+	}
+	res.json(req.session)
+})
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Сервер работает на ${PORT} порту`));
+app.get('/version', (req, res) => {
+	res.json({ version: process.version })
+})
+
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => console.log(`Сервер работает на ${PORT} порту`))
