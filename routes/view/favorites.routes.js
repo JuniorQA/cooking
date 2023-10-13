@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
       where: { user_id: req.session.user_id },
       include: { model: Recipe },
     });
-    //console.log(favorites.map((el) => el.Recipe));
     const recipes = favorites.map((favorite) => favorite.Recipe);
     const html = res.renderComponent(FavoritesPage, {
       title: 'favorites page',

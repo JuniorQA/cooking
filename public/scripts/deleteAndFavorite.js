@@ -15,10 +15,13 @@ if (container) {
         }),
       });
       const data = await res.json();
-      console.log(data);
-    }
-
-    if (e.target.classList.contains('btn-remove-favorite')) {
+      if (data.message === 'success') {
+        e.target.classList.toggle('btn-favorite');
+        e.target.classList.toggle('btn-remove-favorite');
+      } else {
+        console.log(data.message);
+      }
+    } else if (e.target.classList.contains('btn-remove-favorite')) {
       const card = e.target.closest('.recipe-item-container');
       const { id } = card.dataset;
 
@@ -27,8 +30,10 @@ if (container) {
       });
       const data = await res.json();
       if (data.message === 'success') {
+        e.target.classList.toggle('btn-favorite');
+        e.target.classList.toggle('btn-remove-favorite');
       } else {
-        alert(data.message);
+        console.log(data.message);
       }
     }
   });

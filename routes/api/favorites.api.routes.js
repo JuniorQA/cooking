@@ -8,6 +8,7 @@ router.post('/', async (req, res) => {
     result = await Favourite.findOne({
       where: { id, user_id: req.session.user_id },
     });
+    console.log(result, '-->');
     if (result) {
       res.json({ message: 'Вы уже добавляли в избранное' });
       return;

@@ -2,7 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 const NavBar = require('./NavBar');
 const RecipeItem = require('./RecipeItem');
-module.exports = function Main({ user, recipes = [] }) {
+module.exports = function Main({ user, recipes = [], favorites = [] }) {
+  console.log(recipes);
+  const favs = favorites.map((el) => el.recipe_id);
   return (
     <Layout>
       <NavBar user={user} />
@@ -31,7 +33,10 @@ module.exports = function Main({ user, recipes = [] }) {
         {user &&
           recipes.map((recipe) => (
             <>
-              <RecipeItem recipe={recipe} />
+              <RecipeItem
+                recipe={recipe}
+                isFavorite={favs.includes(recipe.id)}
+              />
             </>
           ))}
       </div>
