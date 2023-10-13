@@ -73,19 +73,22 @@ nav {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-img {
+.recipe-item-container img {
   width: 250px;
   height: 250px;
+  margin: 10px 0;
 }
 
 .recipe-item-container {
-  display: block;
   text-align: center;
   box-sizing: border-box;
   border: 2px solid black;
   border-radius: 8px;
   padding: 10px;
   margin: 10px;
+}
+
+.recipe-item-container a {
   transition: 0.5s all;
 }
 
@@ -118,7 +121,6 @@ img {
 }
 body {
   position: relative;
-  height: 100vh;
 }
 
 body::after {
@@ -133,4 +135,14 @@ body::after {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+
+.btn-favorite {
+  background-color: gray;
+  transition: 0.5 all;
+}
+
+.btn-remove-favorite {
+  background-color: greenyellow;
+  transition: 0.5 all;
 }
