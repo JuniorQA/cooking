@@ -3,7 +3,6 @@ const Layout = require('./Layout');
 const NavBar = require('./NavBar');
 const RecipeItem = require('./RecipeItem');
 module.exports = function Main({ user, recipes = [], favorites = [] }) {
-  console.log(recipes);
   const favs = favorites.map((el) => el.recipe_id);
   return (
     <Layout>
