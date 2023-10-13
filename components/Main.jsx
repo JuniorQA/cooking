@@ -3,7 +3,6 @@ const Layout = require('./Layout');
 const NavBar = require('./NavBar');
 const RecipeItem = require('./RecipeItem');
 module.exports = function Main({ user, recipes = [], favorites = [] }) {
-  console.log(recipes);
   const favs = favorites.map((el) => el.recipe_id);
   return (
     <Layout>
@@ -14,8 +13,8 @@ module.exports = function Main({ user, recipes = [], favorites = [] }) {
             <div className="sort-method-container">
               <label htmlFor="sort-select-label">Тип сортировки: </label>
               <select name="sortSelect">
-                <option  value="asc">По возрастанию</option>
-                <option  value ="desc">По убыванию</option>
+                <option value="asc">По возрастанию</option>
+                <option value="desc">По убыванию</option>
               </select>
             </div>
             <div className="sort-method-container">
