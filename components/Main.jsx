@@ -11,14 +11,14 @@ module.exports = function Main({ user, recipes = [] }) {
           <form className="sort-section flex">
             <div className="sort-method-container">
               <label htmlFor="sort-select-label">Тип сортировки: </label>
-              <select name="sort-select">
-                <option value="asc">По возрастанию</option>
-                <option value="desc">По убыванию</option>
+              <select name="sortSelect">
+                <option  value="asc">По возрастанию</option>
+                <option  value ="desc">По убыванию</option>
               </select>
             </div>
             <div className="sort-method-container">
               <label htmlFor="sort-type-label">Как сортировать: </label>
-              <select name="sort-type">
+              <select name="sortType">
                 <option value="ign-count">По количеству ингридиентов</option>
                 <option value="cooking-time">По времени приготовления</option>
               </select>
