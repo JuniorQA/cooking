@@ -14,15 +14,15 @@ module.exports = function Main({ user, recipes = [], favorites = [] }) {
             <div className="sort-method-container">
               <label htmlFor="sort-select-label">Тип сортировки: </label>
               <select name="sortSelect">
-                <option  value="asc">По возрастанию</option>
-                <option  value ="desc">По убыванию</option>
+                <option value="desc">По убыванию</option>
+                <option value="asc">По возрастанию</option>
               </select>
             </div>
             <div className="sort-method-container">
               <label htmlFor="sort-type-label">Как сортировать: </label>
               <select name="sortType">
-                <option value="ign-count">По количеству ингридиентов</option>
                 <option value="cooking-time">По времени приготовления</option>
+                <option value="ign-count">По количеству ингридиентов</option>
               </select>
             </div>
             <button type="submit">Сортировать</button>
