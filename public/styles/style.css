@@ -136,3 +136,13 @@ body::after {
   position: absolute;
   z-index: -1;
 }
+
+.btn-favorite {
+  background-color: gray;
+  transition: 0.5 all;
+}
+
+.btn-remove-favorite {
+  background-color: greenyellow;
+  transition: 0.5 all;
+}

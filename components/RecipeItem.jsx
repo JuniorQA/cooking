@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function RecipeItem({ user, recipe }) {
+module.exports = function RecipeItem({ user, recipe, isFavorite }) {
   return (
     <div
       className="recipe-item-container flex flex-dir-col"
@@ -10,8 +10,11 @@ module.exports = function RecipeItem({ user, recipe }) {
       <a href={'/recipes/' + recipe.id}>
         <img src={recipe.image} alt={recipe.name} />
       </a>
-      <button className="btn-favorite">В Избранное</button>
-      <button className="btn-remove-favorite">Удалить из Избранного</button>
+      {!isFavorite ? (
+        <button className="btn-favorite">❤︎</button>
+      ) : (
+        <button className="btn-remove-favorite">❤︎</button>
+      )}
     </div>
   );
 };
