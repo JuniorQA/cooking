@@ -92,11 +92,6 @@ nav {
   transition: 0.5s all;
 }
 
-.recipe-item-container:hover {
-  transition: 1s all;
-  transform: scale(1.2);
-}
-
 .recipe-item-container * {
   color: black;
 }
@@ -140,9 +135,58 @@ body::after {
 .btn-favorite {
   background-color: gray;
   transition: 0.5 all;
+  width: 20%;
 }
 
 .btn-remove-favorite {
   background-color: greenyellow;
   transition: 0.5 all;
+}
+
+.btn-like-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-like-container h2 + button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5 all;
+}
+.btn-like-container h2 + button:hover {
+  transition: 0.5 all;
+  transform: scale(1.2);
+}
+.btn-like-container h2 {
+  padding: 0 10px;
+}
+.sort-section {
+  padding-top: 100px;
+  justify-content: center;
+}
+
+.sort-section div {
+  padding: 20px;
+}
+
+.sort-section div {
+  margin: 0 20px;
+}
+select {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 4px 4px #ccc;
+}
+
+.sort-section button {
+  padding: 0 15px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  color: white;
+  background-color: rgba(102, 161, 129, 0.8);
 }
