@@ -2,21 +2,25 @@ const router = require('express').Router();
 const { where } = require('sequelize');
 const Main = require('../../components/Main');
 const RecipePage = require('../../components/RecipePage');
-const { Recipe, Favourite } = require('../../db/models');
+const { Recipe , Ingredient,RecipeIngredient } = require('../../db/models');
+
 const shuffleArray = require('../../public/scripts/shuffle');
-const sotrRecipe = require('../../public/scripts/sortRecipe');
+const sortArray = require('../../public/scripts/sortRecipe');
 
 router.get('/', async (req, res) => {
-  const favorites = await Favourite.findAll({
-    where: { user_id: req.session.user_id },
+  const recipes = await Recipe.findAll({
+
+
+    //  where: { recipe_id: ingredient_id },
+    include: { model: RecipeIngredient },
   });
-  const recipes = await Recipe.findAll();
-  shuffleArray(recipes);
-  const html = res.renderComponent(Main, {
-    title: 'cooking-book',
-    recipes,
-    favorites,
-  });
+    const {sortSelect,sortType } = req.query 
+    
+    console.log(sortSelect)
+
+    
+    sortArray(recipes,sortSelect,sortType);
+  const html = res.renderComponent(Main, { title: 'cooking-book', recipes });
   res.send(html);
 });
 
